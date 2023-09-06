@@ -41,5 +41,64 @@ namespace Trabalho_Desktop
             panel3.Visible = true;
             panel2.Visible = true;
         }
+
+        //private void btn_excluir_VisibleChanged(object sender, EventArgs e)
+        //{
+
+        //}
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btn_salvar_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btn_salvar.Enabled == true)
+            {
+                btn_salvar.BackColor = Color.LightSteelBlue;
+            }
+            else
+            {
+                btn_salvar.BackColor = Color.DarkGray;
+            }
+        }
+
+        private void btn_cancelar_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btn_cancelar.Enabled == true)
+            {
+                btn_cancelar.BackColor = Color.LightSteelBlue;
+            }
+            else
+            {
+                btn_cancelar.BackColor = Color.DarkGray;
+            }
+        }
+
+        private void btn_excluir_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btn_excluir.Enabled == true)
+            {
+                btn_excluir.BackColor = Color.LightSteelBlue;
+            }
+            else
+            {
+                btn_excluir.BackColor = Color.DarkGray;
+            }
+        }
+
+        private void btn_criar_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btn_criar.Enabled == true)
+            {
+                btn_criar.BackColor = Color.LightSteelBlue;
+            }
+            else
+            {
+                btn_criar.BackColor = Color.DarkGray;
+            }
+        }
     }
 }

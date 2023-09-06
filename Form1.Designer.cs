@@ -49,7 +49,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btn_pesquisar = new System.Windows.Forms.Button();
-            this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_salvar = new System.Windows.Forms.Button();
             this.btn_criar = new System.Windows.Forms.Button();
@@ -57,6 +56,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_excluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -66,9 +66,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(282, 11);
+            this.label1.Location = new System.Drawing.Point(282, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 33);
             this.label1.TabIndex = 1;
@@ -76,12 +76,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(812, 135);
+            this.panel1.Size = new System.Drawing.Size(812, 130);
             this.panel1.TabIndex = 2;
             // 
             // label2
@@ -104,17 +104,17 @@
             // 
             // txt_nome
             // 
-            this.txt_nome.Location = new System.Drawing.Point(171, 223);
+            this.txt_nome.Location = new System.Drawing.Point(162, 216);
             this.txt_nome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(625, 22);
+            this.txt_nome.Size = new System.Drawing.Size(634, 22);
             this.txt_nome.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 224);
+            this.label3.Location = new System.Drawing.Point(27, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 19);
             this.label3.TabIndex = 5;
@@ -124,7 +124,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 271);
+            this.label4.Location = new System.Drawing.Point(27, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 19);
             this.label4.TabIndex = 7;
@@ -132,15 +132,15 @@
             // 
             // txt_raca
             // 
-            this.txt_raca.Location = new System.Drawing.Point(171, 270);
+            this.txt_raca.Location = new System.Drawing.Point(153, 264);
             this.txt_raca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_raca.Name = "txt_raca";
-            this.txt_raca.Size = new System.Drawing.Size(277, 22);
+            this.txt_raca.Size = new System.Drawing.Size(295, 22);
             this.txt_raca.TabIndex = 8;
             // 
             // txt_cor
             // 
-            this.txt_cor.Location = new System.Drawing.Point(589, 273);
+            this.txt_cor.Location = new System.Drawing.Point(589, 267);
             this.txt_cor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_cor.Name = "txt_cor";
             this.txt_cor.Size = new System.Drawing.Size(207, 22);
@@ -150,7 +150,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(455, 274);
+            this.label5.Location = new System.Drawing.Point(463, 268);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 19);
             this.label5.TabIndex = 9;
@@ -159,7 +159,7 @@
             // 
             // txt_peso
             // 
-            this.txt_peso.Location = new System.Drawing.Point(589, 313);
+            this.txt_peso.Location = new System.Drawing.Point(589, 314);
             this.txt_peso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_peso.Name = "txt_peso";
             this.txt_peso.Size = new System.Drawing.Size(207, 22);
@@ -169,7 +169,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(455, 318);
+            this.label6.Location = new System.Drawing.Point(463, 315);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 19);
             this.label6.TabIndex = 11;
@@ -177,17 +177,17 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(201, 316);
+            this.textBox2.Location = new System.Drawing.Point(193, 312);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 22);
+            this.textBox2.Size = new System.Drawing.Size(255, 22);
             this.textBox2.TabIndex = 14;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 318);
+            this.label7.Location = new System.Drawing.Point(27, 314);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(160, 19);
             this.label7.TabIndex = 13;
@@ -224,17 +224,17 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 411);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(-7, 411);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(785, 329);
+            this.dataGridView1.Size = new System.Drawing.Size(819, 329);
             this.dataGridView1.TabIndex = 17;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(459, 367);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(458, 364);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(268, 22);
             this.textBox3.TabIndex = 22;
@@ -243,8 +243,8 @@
             // 
             this.btn_pesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_pesquisar.Image = global::Trabalho_Desktop.Properties.Resources.pesquisar_icon;
-            this.btn_pesquisar.Location = new System.Drawing.Point(736, 354);
-            this.btn_pesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_pesquisar.Location = new System.Drawing.Point(735, 351);
+            this.btn_pesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pesquisar.Name = "btn_pesquisar";
             this.btn_pesquisar.Size = new System.Drawing.Size(61, 49);
             this.btn_pesquisar.TabIndex = 23;
@@ -252,63 +252,58 @@
             this.btn_pesquisar.UseVisualStyleBackColor = true;
             this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
-            // btn_excluir
-            // 
-            this.btn_excluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_excluir.Enabled = false;
-            this.btn_excluir.Image = global::Trabalho_Desktop.Properties.Resources.lixo_icon;
-            this.btn_excluir.Location = new System.Drawing.Point(243, 354);
-            this.btn_excluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(61, 49);
-            this.btn_excluir.TabIndex = 21;
-            this.toolTip1.SetToolTip(this.btn_excluir, "Excluir");
-            this.btn_excluir.UseVisualStyleBackColor = true;
-            // 
             // btn_cancelar
             // 
+            this.btn_cancelar.BackColor = System.Drawing.Color.DarkGray;
             this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancelar.Enabled = false;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Image = global::Trabalho_Desktop.Properties.Resources.cancelar_icon;
-            this.btn_cancelar.Location = new System.Drawing.Point(173, 354);
-            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cancelar.Location = new System.Drawing.Point(173, 351);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(61, 49);
             this.btn_cancelar.TabIndex = 20;
             this.toolTip1.SetToolTip(this.btn_cancelar, "Cancelar");
-            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.EnabledChanged += new System.EventHandler(this.btn_cancelar_EnabledChanged);
             // 
             // btn_salvar
             // 
+            this.btn_salvar.BackColor = System.Drawing.Color.DarkGray;
             this.btn_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_salvar.Enabled = false;
+            this.btn_salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salvar.Image = global::Trabalho_Desktop.Properties.Resources.salvar_icon2;
-            this.btn_salvar.Location = new System.Drawing.Point(103, 354);
-            this.btn_salvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_salvar.Location = new System.Drawing.Point(103, 351);
+            this.btn_salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(63, 49);
             this.btn_salvar.TabIndex = 19;
             this.toolTip1.SetToolTip(this.btn_salvar, "Salvar");
-            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.EnabledChanged += new System.EventHandler(this.btn_salvar_EnabledChanged);
             // 
             // btn_criar
             // 
-            this.btn_criar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_criar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_criar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_criar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_criar.Image = global::Trabalho_Desktop.Properties.Resources.adicionar_icon;
-            this.btn_criar.Location = new System.Drawing.Point(31, 354);
-            this.btn_criar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_criar.Location = new System.Drawing.Point(31, 351);
+            this.btn_criar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_criar.Name = "btn_criar";
             this.btn_criar.Size = new System.Drawing.Size(63, 49);
             this.btn_criar.TabIndex = 18;
             this.toolTip1.SetToolTip(this.btn_criar, "Adicionar Animal");
             this.btn_criar.UseVisualStyleBackColor = false;
+            this.btn_criar.EnabledChanged += new System.EventHandler(this.btn_criar_EnabledChanged);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pictureBox1.Image = global::Trabalho_Desktop.Properties.Resources.cadastro;
-            this.pictureBox1.Location = new System.Drawing.Point(363, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(363, 44);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(92, 78);
@@ -338,15 +333,31 @@
             this.panel3.TabIndex = 25;
             this.panel3.Visible = false;
             // 
+            // btn_excluir
+            // 
+            this.btn_excluir.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_excluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_excluir.Enabled = false;
+            this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_excluir.Image = global::Trabalho_Desktop.Properties.Resources.lixo_icon;
+            this.btn_excluir.Location = new System.Drawing.Point(242, 351);
+            this.btn_excluir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_excluir.Name = "btn_excluir";
+            this.btn_excluir.Size = new System.Drawing.Size(61, 49);
+            this.btn_excluir.TabIndex = 26;
+            this.toolTip1.SetToolTip(this.btn_excluir, "Excluir");
+            this.btn_excluir.UseVisualStyleBackColor = false;
+            this.btn_excluir.EnabledChanged += new System.EventHandler(this.btn_excluir_EnabledChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(812, 754);
+            this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_pesquisar);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_salvar);
             this.Controls.Add(this.btn_criar);
@@ -370,11 +381,12 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Animais";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -408,12 +420,12 @@
         private System.Windows.Forms.Button btn_criar;
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btn_pesquisar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btn_excluir;
     }
 }
 
