@@ -83,5 +83,26 @@
   <ItemGroup>
     <None Include="Resources\cadastro.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lixo-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisar-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
