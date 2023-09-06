@@ -21,5 +21,25 @@ namespace Trabalho_Desktop
         {
 
         }
+
+        private void lbl_valorTotal_TextChanged(object sender, EventArgs e)
+        {
+            if (lbl_valorTotal.Text == "0")
+            {
+                panel3.BackColor = Color.IndianRed;
+            }
+            else
+            {
+                panel3.BackColor= Color.CornflowerBlue;
+            }
+        }
+
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
+            lbl_valorTotal.Visible = true;
+            lbl_totalRegistro.Visible = true;
+            panel3.Visible = true;
+            panel2.Visible = true;
+        }
     }
 }
