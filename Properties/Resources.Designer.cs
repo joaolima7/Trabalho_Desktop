@@ -63,6 +63,26 @@ namespace Trabalho_Desktop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adicionar_foto {
+            get {
+                object obj = ResourceManager.GetObject("adicionar-foto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap adicionar_foto__1_ {
+            get {
+                object obj = ResourceManager.GetObject("adicionar-foto (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar_icon {
             get {
                 object obj = ResourceManager.GetObject("adicionar-icon", resourceCulture);
@@ -93,6 +113,26 @@ namespace Trabalho_Desktop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cao {
+            get {
+                object obj = ResourceManager.GetObject("cao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap excluir {
+            get {
+                object obj = ResourceManager.GetObject("excluir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lixo_icon {
             get {
                 object obj = ResourceManager.GetObject("lixo-icon", resourceCulture);
@@ -106,6 +146,16 @@ namespace Trabalho_Desktop.Properties {
         internal static System.Drawing.Bitmap pesquisar_icon {
             get {
                 object obj = ResourceManager.GetObject("pesquisar-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remover__1_ {
+            get {
+                object obj = ResourceManager.GetObject("remover (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +186,16 @@ namespace Trabalho_Desktop.Properties {
         internal static System.Drawing.Bitmap salvar_icon2 {
             get {
                 object obj = ResourceManager.GetObject("salvar-icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap simbolo_de_interface_de_lupa_de_pesquisa {
+            get {
+                object obj = ResourceManager.GetObject("simbolo-de-interface-de-lupa-de-pesquisa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

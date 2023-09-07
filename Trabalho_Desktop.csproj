@@ -104,5 +104,23 @@
   <ItemGroup>
     <None Include="Resources\pesquisar-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-foto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remover %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-foto %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simbolo-de-interface-de-lupa-de-pesquisa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
