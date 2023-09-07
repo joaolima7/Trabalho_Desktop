@@ -125,5 +125,13 @@ namespace Trabalho_Desktop
                 button2.BackColor = Color.DarkGray;
             }
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
