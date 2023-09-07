@@ -54,23 +54,26 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_pesquisar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_salvar = new System.Windows.Forms.Button();
             this.btn_criar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -252,7 +255,7 @@
             this.textBox3.Location = new System.Drawing.Point(108, 13);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(452, 22);
+            this.textBox3.Size = new System.Drawing.Size(368, 22);
             this.textBox3.TabIndex = 22;
             // 
             // panel2
@@ -260,7 +263,7 @@
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.lbl_totalRegistro);
-            this.panel2.Location = new System.Drawing.Point(11, 799);
+            this.panel2.Location = new System.Drawing.Point(32, 796);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(223, 42);
             this.panel2.TabIndex = 24;
@@ -271,7 +274,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.lbl_valorTotal);
-            this.panel3.Location = new System.Drawing.Point(240, 799);
+            this.panel3.Location = new System.Drawing.Point(261, 796);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(86, 42);
             this.panel3.TabIndex = 25;
@@ -281,6 +284,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.textBox3);
@@ -294,10 +298,15 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(635, 12);
+            this.comboBox1.Items.AddRange(new object[] {
+            "Código",
+            "Nome Animal",
+            "Nome Proprietário"});
+            this.comboBox1.Location = new System.Drawing.Point(601, 12);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(141, 24);
+            this.comboBox1.Size = new System.Drawing.Size(175, 24);
             this.comboBox1.TabIndex = 25;
+            this.comboBox1.Text = "Nome Animal";
             // 
             // label8
             // 
@@ -309,29 +318,44 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Procurar:";
             // 
-            // button2
+            // panel5
             // 
-            this.button2.Image = global::Trabalho_Desktop.Properties.Resources.excluir;
-            this.button2.Location = new System.Drawing.Point(680, 194);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 41);
-            this.button2.TabIndex = 30;
-            this.button2.UseVisualStyleBackColor = true;
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.pictureBox2);
+            this.panel5.Location = new System.Drawing.Point(11, 134);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(788, 243);
+            this.panel5.TabIndex = 31;
             // 
-            // button1
+            // panel6
             // 
-            this.button1.Image = global::Trabalho_Desktop.Properties.Resources.adicionar_foto__1_;
-            this.button1.Location = new System.Drawing.Point(733, 194);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 41);
-            this.button1.TabIndex = 29;
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Location = new System.Drawing.Point(13, 788);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(788, 52);
+            this.panel6.TabIndex = 32;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Trabalho_Desktop.Properties.Resources.simbolo_de_ferramenta_preenchido_com_filtro;
+            this.pictureBox3.Location = new System.Drawing.Point(563, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 26;
+            this.pictureBox3.TabStop = false;
             // 
             // btn_pesquisar
             // 
             this.btn_pesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_pesquisar.Image = global::Trabalho_Desktop.Properties.Resources.simbolo_de_interface_de_lupa_de_pesquisa;
-            this.btn_pesquisar.Location = new System.Drawing.Point(577, 3);
+            this.btn_pesquisar.Location = new System.Drawing.Point(484, 3);
             this.btn_pesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pesquisar.Name = "btn_pesquisar";
             this.btn_pesquisar.Size = new System.Drawing.Size(42, 41);
@@ -340,28 +364,17 @@
             this.btn_pesquisar.UseVisualStyleBackColor = true;
             this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::Trabalho_Desktop.Properties.Resources.cao;
-            this.pictureBox2.Location = new System.Drawing.Point(601, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(175, 171);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 27;
-            this.pictureBox2.TabStop = false;
-            // 
             // btn_excluir
             // 
             this.btn_excluir.BackColor = System.Drawing.Color.DarkGray;
             this.btn_excluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_excluir.Enabled = false;
             this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_excluir.Image = global::Trabalho_Desktop.Properties.Resources.lixo_icon;
-            this.btn_excluir.Location = new System.Drawing.Point(735, 792);
+            this.btn_excluir.Image = global::Trabalho_Desktop.Properties.Resources.excluir__1_;
+            this.btn_excluir.Location = new System.Drawing.Point(735, 794);
             this.btn_excluir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(61, 49);
+            this.btn_excluir.Size = new System.Drawing.Size(46, 41);
             this.btn_excluir.TabIndex = 26;
             this.toolTip1.SetToolTip(this.btn_excluir, "Excluir");
             this.btn_excluir.UseVisualStyleBackColor = false;
@@ -373,11 +386,11 @@
             this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancelar.Enabled = false;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Image = global::Trabalho_Desktop.Properties.Resources.cancelar_icon;
-            this.btn_cancelar.Location = new System.Drawing.Point(646, 792);
+            this.btn_cancelar.Image = global::Trabalho_Desktop.Properties.Resources.sem_animais;
+            this.btn_cancelar.Location = new System.Drawing.Point(646, 794);
             this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(61, 49);
+            this.btn_cancelar.Size = new System.Drawing.Size(46, 41);
             this.btn_cancelar.TabIndex = 20;
             this.toolTip1.SetToolTip(this.btn_cancelar, "Cancelar");
             this.btn_cancelar.UseVisualStyleBackColor = false;
@@ -389,11 +402,11 @@
             this.btn_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_salvar.Enabled = false;
             this.btn_salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salvar.Image = global::Trabalho_Desktop.Properties.Resources.salvar_icon2;
-            this.btn_salvar.Location = new System.Drawing.Point(556, 792);
+            this.btn_salvar.Image = global::Trabalho_Desktop.Properties.Resources.salve_;
+            this.btn_salvar.Location = new System.Drawing.Point(556, 794);
             this.btn_salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(63, 49);
+            this.btn_salvar.Size = new System.Drawing.Size(46, 41);
             this.btn_salvar.TabIndex = 19;
             this.toolTip1.SetToolTip(this.btn_salvar, "Salvar");
             this.btn_salvar.UseVisualStyleBackColor = false;
@@ -404,11 +417,11 @@
             this.btn_criar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_criar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_criar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_criar.Image = global::Trabalho_Desktop.Properties.Resources.adicionar_icon;
-            this.btn_criar.Location = new System.Drawing.Point(463, 792);
+            this.btn_criar.Image = global::Trabalho_Desktop.Properties.Resources.clinica_de_cuidado_de_animais_domesticos;
+            this.btn_criar.Location = new System.Drawing.Point(463, 794);
             this.btn_criar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_criar.Name = "btn_criar";
-            this.btn_criar.Size = new System.Drawing.Size(63, 49);
+            this.btn_criar.Size = new System.Drawing.Size(46, 41);
             this.btn_criar.TabIndex = 18;
             this.toolTip1.SetToolTip(this.btn_criar, "Adicionar Animal");
             this.btn_criar.UseVisualStyleBackColor = false;
@@ -426,18 +439,46 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel5
+            // button1
             // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Location = new System.Drawing.Point(11, 134);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(788, 243);
-            this.panel5.TabIndex = 31;
+            this.button1.BackColor = System.Drawing.Color.DarkGray;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Enabled = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::Trabalho_Desktop.Properties.Resources.adicionar_foto__1_;
+            this.button1.Location = new System.Drawing.Point(695, 188);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 41);
+            this.button1.TabIndex = 29;
+            this.toolTip1.SetToolTip(this.button1, "Adicionar Foto");
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.EnabledChanged += new System.EventHandler(this.button1_EnabledChanged);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkGray;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Enabled = false;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::Trabalho_Desktop.Properties.Resources.excluir;
+            this.button2.Location = new System.Drawing.Point(642, 188);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(42, 41);
+            this.button2.TabIndex = 30;
+            this.toolTip1.SetToolTip(this.button2, "Remover Foto");
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.EnabledChanged += new System.EventHandler(this.button2_EnabledChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::Trabalho_Desktop.Properties.Resources.cao;
+            this.pictureBox2.Location = new System.Drawing.Point(601, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(175, 171);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
@@ -469,6 +510,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -483,9 +525,10 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -527,6 +570,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

@@ -122,5 +122,20 @@
   <ItemGroup>
     <None Include="Resources\simbolo-de-interface-de-lupa-de-pesquisa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinica-de-cuidado-de-animais-domesticos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salve-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sem-animais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simbolo-de-ferramenta-preenchido-com-filtro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

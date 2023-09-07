@@ -40,6 +40,7 @@ namespace Trabalho_Desktop
             lbl_totalRegistro.Visible = true;
             panel3.Visible = true;
             panel2.Visible = true;
+            button1.Enabled = true;
         }
 
         //private void btn_excluir_VisibleChanged(object sender, EventArgs e)
@@ -98,6 +99,30 @@ namespace Trabalho_Desktop
             else
             {
                 btn_criar.BackColor = Color.DarkGray;
+            }
+        }
+
+        private void button1_EnabledChanged(object sender, EventArgs e)
+        {
+            if (button1.Enabled == true)
+            {
+                button1.BackColor = Color.LightSteelBlue;
+            }
+            else
+            {
+                button1.BackColor = Color.DarkGray;
+            }
+        }
+
+        private void button2_EnabledChanged(object sender, EventArgs e)
+        {
+            if (button2.Enabled == true)
+            {
+                button2.BackColor = Color.LightSteelBlue;
+            }
+            else
+            {
+                button2.BackColor = Color.DarkGray;
             }
         }
     }
