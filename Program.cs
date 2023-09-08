@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabalho_Desktop.View;
 
 namespace Trabalho_Desktop
 {
@@ -16,7 +17,7 @@ namespace Trabalho_Desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new SplashScreen());
         }
     }
 }

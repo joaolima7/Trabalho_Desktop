@@ -12,6 +12,8 @@ namespace Trabalho_Desktop
 {
     public partial class Form1 : Form
     {
+        private bool fechaform = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -36,6 +38,24 @@ namespace Trabalho_Desktop
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
         {
+            if (Cb_filter.Text == "Nome Animal")
+            {
+
+            }
+            else if (Cb_filter.Text == "Nome Nome Proprietário")
+            {
+
+            }
+            else if (Cb_filter.Text == "Código")
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Selecione o tipo de pesquisa!", "ATENÇÃO",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                Cb_filter.Focus();
+            }
+            
             lbl_valorTotal.Visible = true;
             lbl_totalRegistro.Visible = true;
             panel3.Visible = true;
@@ -43,10 +63,6 @@ namespace Trabalho_Desktop
             button1.Enabled = true;
         }
 
-        //private void btn_excluir_VisibleChanged(object sender, EventArgs e)
-        //{
-
-        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -131,6 +147,57 @@ namespace Trabalho_Desktop
             if (char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btn_criar_Click(object sender, EventArgs e)
+        {
+            btn_criar.Enabled = false;
+            button1.Enabled = true;
+            btn_cancelar.Enabled = true;
+            btn_salvar.Enabled = true;
+            btn_excluir.Enabled = false;
+        }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            btn_salvar.Enabled = false;
+            btn_excluir.Enabled = false;
+            btn_cancelar.Enabled = false;
+            btn_criar.Enabled = true;
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            btn_cancelar.Enabled = false;
+            button1.Enabled = false;
+            btn_criar.Enabled = true;
+            btn_salvar.Enabled = false;
+            btn_excluir.Enabled = false;
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            btn_excluir.Enabled = false;
+            btn_salvar.Enabled=false;
+            btn_cancelar.Enabled = false;
+            btn_criar.Enabled = true; 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!fechaform)
+            {
+                DialogResult dr = MessageBox.Show("Deseja sair?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    fechaform = true;
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }
