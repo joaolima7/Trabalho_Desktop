@@ -500,7 +500,6 @@
             // 
             this.btn_rel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_rel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_rel.Enabled = false;
             this.btn_rel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_rel.Image = global::Trabalho_Desktop.Properties.Resources.impressao__1_;
             this.btn_rel.Location = new System.Drawing.Point(339, 6);
@@ -510,6 +509,7 @@
             this.btn_rel.TabIndex = 27;
             this.toolTip1.SetToolTip(this.btn_rel, "Excluir");
             this.btn_rel.UseVisualStyleBackColor = false;
+            this.btn_rel.Click += new System.EventHandler(this.btn_rel_Click);
             // 
             // Form1
             // 

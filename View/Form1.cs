@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabalho_Desktop.View;
 
 namespace Trabalho_Desktop
 {
@@ -239,6 +240,14 @@ namespace Trabalho_Desktop
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_rel_Click(object sender, EventArgs e)
+        {
+           FrmRel report = new FrmRel();
+           this.Hide();
+            report.ShowDialog();
+            this.Show();
         }
     }
 }

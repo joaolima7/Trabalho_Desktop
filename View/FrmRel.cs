@@ -16,5 +16,10 @@ namespace Trabalho_Desktop.View
         {
             InitializeComponent();
         }
+
+        private void FrmRel_Load(object sender, EventArgs e)
+        {
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
