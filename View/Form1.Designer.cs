@@ -56,6 +56,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
@@ -66,11 +67,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_rel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -124,6 +127,7 @@
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(425, 22);
             this.txt_nome.TabIndex = 6;
+            this.txt_nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nome_KeyPress);
             // 
             // label3
             // 
@@ -141,7 +145,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 231);
+            this.label4.Location = new System.Drawing.Point(27, 268);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 19);
             this.label4.TabIndex = 7;
@@ -149,11 +153,12 @@
             // 
             // txt_raca
             // 
-            this.txt_raca.Location = new System.Drawing.Point(153, 230);
+            this.txt_raca.Location = new System.Drawing.Point(153, 267);
             this.txt_raca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_raca.Name = "txt_raca";
             this.txt_raca.Size = new System.Drawing.Size(295, 22);
             this.txt_raca.TabIndex = 8;
+            this.txt_raca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_raca_KeyPress);
             // 
             // txt_cor
             // 
@@ -162,6 +167,7 @@
             this.txt_cor.Name = "txt_cor";
             this.txt_cor.Size = new System.Drawing.Size(207, 22);
             this.txt_cor.TabIndex = 10;
+            this.txt_cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cor_KeyPress);
             // 
             // label5
             // 
@@ -180,8 +186,9 @@
             this.txt_peso.Location = new System.Drawing.Point(153, 349);
             this.txt_peso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_peso.Name = "txt_peso";
-            this.txt_peso.Size = new System.Drawing.Size(207, 22);
+            this.txt_peso.Size = new System.Drawing.Size(135, 22);
             this.txt_peso.TabIndex = 12;
+            this.txt_peso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_peso_KeyPress);
             // 
             // label6
             // 
@@ -196,18 +203,19 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(193, 270);
+            this.textBox2.Location = new System.Drawing.Point(193, 226);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(255, 22);
+            this.textBox2.Size = new System.Drawing.Size(391, 22);
             this.textBox2.TabIndex = 14;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 272);
+            this.label7.Location = new System.Drawing.Point(27, 228);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(160, 19);
             this.label7.TabIndex = 13;
@@ -224,7 +232,6 @@
             this.lbl_totalRegistro.Size = new System.Drawing.Size(195, 27);
             this.lbl_totalRegistro.TabIndex = 15;
             this.lbl_totalRegistro.Text = "Total de Registros";
-            this.lbl_totalRegistro.Visible = false;
             // 
             // lbl_valorTotal
             // 
@@ -236,7 +243,6 @@
             this.lbl_valorTotal.TabIndex = 16;
             this.lbl_valorTotal.Text = "0";
             this.lbl_valorTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_valorTotal.Visible = false;
             this.lbl_valorTotal.TextChanged += new System.EventHandler(this.lbl_valorTotal_TextChanged);
             // 
             // dataGridView1
@@ -268,7 +274,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(223, 42);
             this.panel2.TabIndex = 24;
-            this.panel2.Visible = false;
             // 
             // panel3
             // 
@@ -279,7 +284,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(86, 42);
             this.panel3.TabIndex = 25;
-            this.panel3.Visible = false;
             // 
             // panel4
             // 
@@ -337,11 +341,16 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.btn_rel);
             this.panel6.Location = new System.Drawing.Point(13, 788);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(788, 52);
             this.panel6.TabIndex = 32;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // pictureBox3
             // 
@@ -391,7 +400,7 @@
             this.btn_cancelar.Enabled = false;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Image = global::Trabalho_Desktop.Properties.Resources.sem_animais;
-            this.btn_cancelar.Location = new System.Drawing.Point(646, 794);
+            this.btn_cancelar.Location = new System.Drawing.Point(671, 794);
             this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(46, 41);
@@ -408,7 +417,7 @@
             this.btn_salvar.Enabled = false;
             this.btn_salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salvar.Image = global::Trabalho_Desktop.Properties.Resources.salve_;
-            this.btn_salvar.Location = new System.Drawing.Point(556, 794);
+            this.btn_salvar.Location = new System.Drawing.Point(606, 794);
             this.btn_salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(46, 41);
@@ -424,7 +433,7 @@
             this.btn_criar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_criar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_criar.Image = global::Trabalho_Desktop.Properties.Resources.clinica_de_cuidado_de_animais_domesticos;
-            this.btn_criar.Location = new System.Drawing.Point(463, 794);
+            this.btn_criar.Location = new System.Drawing.Point(538, 794);
             this.btn_criar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_criar.Name = "btn_criar";
             this.btn_criar.Size = new System.Drawing.Size(46, 41);
@@ -487,6 +496,21 @@
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             // 
+            // btn_rel
+            // 
+            this.btn_rel.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_rel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_rel.Enabled = false;
+            this.btn_rel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_rel.Image = global::Trabalho_Desktop.Properties.Resources.impressao__1_;
+            this.btn_rel.Location = new System.Drawing.Point(339, 6);
+            this.btn_rel.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_rel.Name = "btn_rel";
+            this.btn_rel.Size = new System.Drawing.Size(46, 41);
+            this.btn_rel.TabIndex = 27;
+            this.toolTip1.SetToolTip(this.btn_rel, "Excluir");
+            this.btn_rel.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -534,6 +558,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -580,6 +605,8 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btn_rel;
     }
 }
 

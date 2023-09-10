@@ -32,7 +32,7 @@ namespace Trabalho_Desktop
             }
             else
             {
-                panel3.BackColor= Color.CornflowerBlue;
+                panel3.BackColor = Color.CornflowerBlue;
             }
         }
 
@@ -52,10 +52,10 @@ namespace Trabalho_Desktop
             }
             else
             {
-                MessageBox.Show("Selecione o tipo de pesquisa!", "ATENÇÃO",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione o tipo de pesquisa!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Cb_filter.Focus();
             }
-            
+
             lbl_valorTotal.Visible = true;
             lbl_totalRegistro.Visible = true;
             panel3.Visible = true;
@@ -179,9 +179,9 @@ namespace Trabalho_Desktop
         private void btn_excluir_Click(object sender, EventArgs e)
         {
             btn_excluir.Enabled = false;
-            btn_salvar.Enabled=false;
+            btn_salvar.Enabled = false;
             btn_cancelar.Enabled = false;
-            btn_criar.Enabled = true; 
+            btn_criar.Enabled = true;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -198,6 +198,46 @@ namespace Trabalho_Desktop
                 {
                     e.Cancel = true;
                 }
+            }
+        }
+
+        private void txt_nome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_peso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_cor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsPunctuation(e.KeyChar) || char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_raca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsPunctuation(e.KeyChar) || char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsPunctuation(e.KeyChar) || char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }
