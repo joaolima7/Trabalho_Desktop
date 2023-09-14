@@ -15,9 +15,9 @@ namespace Trabalho_Desktop.Model
         public string NomeAnimal { get; set; }
         public string RacaAnimal { get; set; }
         public string CorAnimal { get; set; }
-        public double PesoAnimal { get; set; }
+        public String PesoAnimal { get; set; }
         public string NomeProprietario { get; set; }
-        public byte[] FotoAnimal { get; set; }
+        public byte[] Foto { get; set; } // Novo campo para a foto
 
     }
 }
